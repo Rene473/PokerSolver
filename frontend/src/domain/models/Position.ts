@@ -8,6 +8,18 @@ export const Positions = {
     BTN: "BTN",
     SB: "SB",
     BB: "BB",
-  } as const;
+} as const;
+
+export const positionDealOrder = [
+    Positions.SB,
+    Positions.BB,
+    Positions.UTG,
+    Positions.UTG1,
+    Positions.UTG2,
+    Positions.LJ,
+    Positions.HJ,
+    Positions.CO,
+    Positions.BTN,
+] as const;
 
 export type Position = typeof Positions[keyof typeof Positions];

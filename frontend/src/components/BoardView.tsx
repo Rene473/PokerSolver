@@ -1,4 +1,5 @@
 import { CardView } from "@components/CardView/CardView";
+import { PlayerView } from "@components/PlayerView/PlayerView";
 import type { Board } from "@domain/models/Board";
 
 interface BoardViewProps {
@@ -29,14 +30,7 @@ export function BoardView({ board }: BoardViewProps) {
 
             <div className="player-grid">
                 {board.getPlayers().map((player, index) => (
-                    <div key={index} className="player-card">
-                        <div className="player-name">{player.getName()}</div>
-                        <div className="player-meta">
-                            <span>{player.getPosition()}</span>
-                            <span>{player.getStack()} chips</span>
-                        </div>
-                        <div className="player-hand">{player.getHand().toString()}</div>
-                    </div>
+                    <PlayerView key={index} player={player} index={index} />
                 ))}
             </div>
         </section>
