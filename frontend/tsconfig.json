@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@domain/*": ["src/domain/*"],
+      "@cards/*": ["src/domain/cards/*"],
+      "@components/*": ["src/components/*"],
+      "@range/*": ["src/domain/range/*"]
+    },
+    "ignoreDeprecations": "6.0"
+  },
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
+}
