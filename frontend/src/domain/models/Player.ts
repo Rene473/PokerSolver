@@ -31,6 +31,10 @@ export class Player {
         return this.hand;
     }
 
+    setHand(hand: Hand): void {
+        this.hand = hand;
+    }
+
     getStack(): number {
         return this.stack;
     }
